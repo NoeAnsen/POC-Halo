@@ -1,0 +1,20 @@
+{
+  "name": "@login-bdd/wdio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:headless": "wdio run ./wdio.conf.ts",
+    "test:headed": "HEADLESS=false wdio run ./wdio.conf.ts",
+    "test:ui": "HEADLESS=false WDIO_UI=true wdio run ./wdio.conf.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@wdio/cli": "^9.32.0",
+    "@wdio/cucumber-framework": "^9.32.0",
+    "@wdio/devtools-service": "^10.11.0",
+    "@wdio/globals": "^9.31.3",
+    "@wdio/local-runner": "^9.32.0",
+    "@wdio/spec-reporter": "^9.32.0"
+  }
+}

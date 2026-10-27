@@ -1,0 +1,39 @@
+{
+  "name": "saucedemo-login-bdd",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SauceDemo login suite: the same Gherkin features run with Playwright (playwright-bdd) and WebdriverIO + Cucumber",
+  "type": "module",
+  "engines": {
+    "node": ">=20.18"
+  },
+  "workspaces": [
+    "playwright",
+    "wdio"
+  ],
+  "scripts": {
+    "test": "npm run test:pw:headless && npm run test:wdio:headless",
+    "test:pw:headless": "npm run test:headless --workspace playwright",
+    "test:pw:headed": "npm run test:headed --workspace playwright",
+    "test:pw:debug": "npm run test:debug --workspace playwright",
+    "test:wdio:headless": "npm run test:headless --workspace wdio",
+    "test:wdio:headed": "npm run test:headed --workspace wdio",
+    "test:wdio:ui": "npm run test:ui --workspace wdio",
+    "typecheck": "tsc -p shared && npm run typecheck --workspaces",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@types/node": "^22.10.0",
+    "dotenv": "^17.2.3",
+    "eslint": "^9.39.5",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-playwright": "^2.12.1",
+    "prettier": "^3.9.10",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.72.0"
+  }
+}

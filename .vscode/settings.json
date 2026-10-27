@@ -1,0 +1,4 @@
+{
+  "cucumber.features": ["features/**/*.feature"],
+  "cucumber.glue": ["playwright/steps/**/*.ts", "wdio/steps/**/*.ts"]
+}

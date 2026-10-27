@@ -1,0 +1,16 @@
+node_modules/
+.env
+
+# Playwright
+.features-gen/
+test-results/
+playwright-report/
+blob-report/
+
+# Reports (both frameworks)
+reports/
+
+# WebdriverIO
+wdio/logs/
+
+.DS_Store
